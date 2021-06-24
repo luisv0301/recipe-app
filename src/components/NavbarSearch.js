@@ -15,8 +15,6 @@ export default function NavbarSearch() {
   // API PARAMETERS
   const APP_ID = process.env.REACT_APP_API_ID;
   const APP_KEY = process.env.REACT_APP_API_KEY;
-  console.log(APP_ID);
-  console.log(APP_KEY);
 
   const fetchRecipes = async () => {
     try {
