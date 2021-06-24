@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import RecipesCard from "./components/RecipesCard";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import RecipesContextProvider from "./contexts/RecipesContextProvider";
+import Home from "./layout/Home";
+import Navbar from "./layout/Navbar";
+import Card from "./components/Card";
+import Page404 from "./components/Page404";
+import SearchError from "./components/SearchError";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <RecipesContextProvider>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/cards" component={RecipesCard} />
+            <Route path="/card/:label" component={Card} />
+            <Route path="/searchError" component={SearchError} />
+            <Route path="*" component={Page404} />
+          </Switch>
+        </Router>
+      </RecipesContextProvider>
     </div>
   );
 }

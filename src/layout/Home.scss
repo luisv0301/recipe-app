@@ -1,0 +1,21 @@
+.header {
+  margin: auto;
+  width: Min(900px, 100%);
+  height: calc(100vh - 60px);
+  padding: 2.5em;
+  background-image: url("../assets/back.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-description {
+    width: Min(80ch, 95%);
+    margin: auto;
+    padding: 1.5em;
+    background-color: white;
+
+    h4 {
+      margin: 1.5rem 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../mixings";
+
+.cards-container {
+  max-width: 800px;
+  display: grid;
+  margin: 2rem auto;
+  padding: 1.5em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 29rem);
+  gap: 1.5em;
+  place-items: center;
+
+  @include medium() {
+    grid-template-columns: auto;
+    width: 87%;
+  }
+
+  @include small() {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffaea5;
+  padding: 1em;
+  border-radius: 7px;
+
+  &-img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  &-is-no-visible {
+    display: none;
+  }
+
+  &-link {
+    width: fit-content;
+    display: inline-block;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.5em 1em;
+    background: #c1736a;
+    border-radius: 0.5em;
+  }
+}

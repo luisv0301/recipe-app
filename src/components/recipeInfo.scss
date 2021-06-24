@@ -1,0 +1,90 @@
+.recipe-info {
+  width: Min(450px, 90%);
+  margin: 2rem auto;
+  padding: 1.5em;
+  background-color: #ffaea5;
+  border-radius: 7px;
+
+  &-subtittle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    img {
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  &-label {
+    font-size: 1.2rem;
+    display: flex;
+    margin: 0.5em 0em;
+    opacity: 0.8;
+  }
+  &-label::after {
+    content: "\2795";
+    margin-left: auto;
+    transition: transfrom 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &-labels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #eceae4;
+
+    p {
+      opacity: 0.9;
+      font-weight: 800;
+      align-self: center;
+      text-align: center;
+      padding: 1em;
+
+      &:nth-child(1) {
+        border-right: 1px solid;
+      }
+
+      &:nth-child(3) {
+        border-left: 1px solid;
+      }
+    }
+  }
+
+  &-list {
+    display: none;
+    margin-top: 0.5em;
+    list-style: inside;
+    background: aliceblue;
+    border-radius: 7px;
+    transition: all 600ms ease-in-out;
+  }
+
+  &-item {
+    padding: 1em;
+    &-nutrients {
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(odd) {
+        background-color: #eceae4;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked + .recipe-info-description .recipe-info-list {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked
+    + .recipe-info-description
+    .recipe-info-label::after {
+    transform: rotate(45deg);
+  }
+}
