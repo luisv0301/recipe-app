@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    opacity: 0.8;
+    opacity: 0.6;
     img {
       width: 2rem;
       margin-right: 0.5rem;
@@ -23,11 +23,16 @@
   input[type="checkbox"] {
     display: none;
   }
+
+  &-description--with-margin {
+    margin: 1.5rem 0;
+  }
+
   &-label {
     font-size: 1.2rem;
     display: flex;
     margin: 0.5em 0em;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   &-label::after {
     content: "\2795";
@@ -41,7 +46,7 @@
     background-color: #eceae4;
 
     p {
-      opacity: 0.9;
+      opacity: 0.8;
       font-weight: 800;
       align-self: center;
       text-align: center;

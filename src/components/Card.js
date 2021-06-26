@@ -44,7 +44,7 @@ export default function Card() {
                 <p>{totalWeight.toFixed(2)}gr</p>
               </div>
               <input type="checkbox" id="nutrients" />
-              <div className="recipe-info-description">
+              <div className="recipe-info-description recipe-info-description--with-margin">
                 <label htmlFor="nutrients">
                   <h4 className="recipe-info-label">Nutrients</h4>
                 </label>
