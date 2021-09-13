@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import "../components/recipeInfo.scss";
 import { Redirect, useParams } from "react-router";
 import { RecipesContext } from "../contexts/RecipesContextProvider";
 import icon from "../assets/dish.svg";
+
+import "../components/recipeInfo.scss";
 
 export default function Card() {
   const { label } = useParams();

@@ -15,10 +15,10 @@ export default function Home() {
       <header className="header">
         <div className="header-description">
           <h1>The most delicious recipes, in just one place.</h1>
-          <h4>
+          <p>
             Here you'll be able to find some of the best recipes out there.
             Start by searching
-          </h4>
+          </p>
         </div>
       </header>
     </>
